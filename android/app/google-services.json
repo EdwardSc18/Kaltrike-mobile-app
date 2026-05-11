@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "737928134193",
+    "firebase_url": "https://kaltrikedriverapp-default-rtdb.firebaseio.com",
+    "project_id": "kaltrikedriverapp",
+    "storage_bucket": "kaltrikedriverapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737928134193:android:e1d252832843bff5505f10",
+        "android_client_info": {
+          "package_name": "com.example.kaltrike02"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWKro2onW9Mu_go2qTG5mFN_6UeAkf7P0"
+        },
+        {
+          "current_key": "AIzaSyCKKOiVQDIPG4nSWkv8rdhaOQBDRWor1Sg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737928134193:android:87f381ad055e3555505f10",
+        "android_client_info": {
+          "package_name": "com.example.kaltrike_driver_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWKro2onW9Mu_go2qTG5mFN_6UeAkf7P0"
+        },
+        {
+          "current_key": "AIzaSyCKKOiVQDIPG4nSWkv8rdhaOQBDRWor1Sg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737928134193:android:eb2dac2170e26610505f10",
+        "android_client_info": {
+          "package_name": "com.example.kaltrike_user_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWKro2onW9Mu_go2qTG5mFN_6UeAkf7P0"
+        },
+        {
+          "current_key": "AIzaSyCKKOiVQDIPG4nSWkv8rdhaOQBDRWor1Sg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
