@@ -1,0 +1,100 @@
+[PASS] TODA monitor can view trip history
+[PASS] TODA monitor can view ratings
+[PASS] TODA monitor sidebar no longer exposes commuters
+[PASS] TODA monitor can view validation records
+[PASS] TODA monitor dashboard route uses dedicated file
+[PASS] TODA monitor ratings route uses dedicated file
+[PASS] TODA monitor drivers route uses dedicated file
+[PASS] BPLO dashboard route uses dedicated file
+[PASS] BPLO ratings route stays on shared ratings file
+[PASS] Super admin dashboard route stays on main dashboard
+[PASS] Super admin drivers route stays on shared drivers file
+[PASS] TODA admin drivers route uses dedicated file
+[PASS] Explicit online flag marks driver online
+[PASS] Approved driver is not online without live flag
+[PASS] Recent presence timestamp marks driver online
+[PASS] Validation document resolver keeps direct ID URL
+[PASS] Validation document resolver keeps direct permit URL
+[PASS] Validation document resolver falls back to driver_validations node
+[PASS] Scoped driver stats count only selected TODA drivers
+[PASS] Scoped driver stats keep pending count within TODA
+[PASS] Scoped rating stats count only drivers in selected TODA
+[PASS] Scoped rating stats count only rated drivers in selected TODA
+[PASS] Bulk selection normalization trims empties and duplicates
+[PASS] Bulk delete counts unique selected ids
+[PASS] Bulk delete counts successful deletions
+[PASS] Bulk delete counts failed deletions
+[PASS] Bulk delete reports invalid callbacks as failed deletions
+[PASS] Feedback helper strips the Comment prefix from ride records
+[PASS] Feedback helper ignores empty passenger comments
+[PASS] Trip comment feedback builder creates a record for ride comments
+[PASS] Trip comment feedback builder stores normalized passenger comments
+[PASS] Trip comment feedback builder supports raw comment nodes
+[PASS] Trip comment feedback builder skips blank passenger comments
+[PASS] Trip comment feedback builder resolves missing driver names from the driver index
+[PASS] Trip comment feedback builder resolves missing passenger names from the passenger index
+[PASS] Passenger comment accessor exists in the data layer
+[PASS] Firebase request cache reads previously written values
+[PASS] Firebase request cache preserves cached payloads
+[PASS] Firebase request cache clear removes nested cached entries
+[PASS] Sidebar uses the shorter TODAs label for aligned navigation
+[PASS] Sidebar loads cached external sidebar CSS
+[PASS] Sidebar loads cached external sidebar JavaScript
+[PASS] Sidebar hides commuters for TODA monitor accounts
+[PASS] Sidebar uses role-aware dashboard routing
+[PASS] Sidebar uses role-aware driver routing
+[PASS] Sidebar exposes the feedback page when the role has feedback access
+[PASS] Sidebar no longer shows the old Admin Panel header text
+[PASS] Sidebar no longer shows the old management dashboard subtitle
+[PASS] Sidebar branding uses the login-page tricycle icon
+[PASS] Sidebar no longer links to the admin users page
+[PASS] External sidebar stylesheet exists
+[PASS] External sidebar JavaScript exists
+[PASS] Dedicated TODA dashboard file exists
+[PASS] Dedicated TODA ratings file exists
+[PASS] Dedicated TODA drivers file exists
+[PASS] Dedicated BPLO dashboard file exists
+[PASS] Admin users page now redirects into TODA management
+[PASS] TODA management includes a dedicated TODA account creation form
+[PASS] TODA management includes monitoring for all TODAs
+[PASS] TODA management no longer renders the old create TODA form
+[PASS] Trip management no longer renders the filter panel
+[PASS] Trip management no longer renders the filter toggle control
+[PASS] TODA dashboard no longer shows the quick overview card
+[PASS] Shared UI theme now loads cached external CSS
+[PASS] Shared UI theme CSS keeps the restored v6 login background gradient
+[PASS] Shared UI theme CSS keeps the restored v6 login button gradient
+[PASS] Shared UI theme CSS styles page headers as consistent surface cards
+[PASS] Shared UI theme CSS prevents horizontal overflow for phone layouts
+[PASS] Shared UI theme CSS includes a dedicated phone breakpoint
+[PASS] Shared UI theme CSS makes record tables horizontally scrollable on smaller screens
+[PASS] External shared UI theme stylesheet exists
+[PASS] Drivers page paginates records before rendering
+[PASS] Ratings page paginates records before rendering
+[PASS] Commuters page paginates records before rendering
+[PASS] Dedicated TODA ratings page paginates records before rendering
+[PASS] Feedback page paginates records before rendering
+[PASS] Feedback page reads passenger comments only
+[PASS] Feedback page shows a dedicated driver name column
+[PASS] Feedback page shows a dedicated passenger name column
+[PASS] Feedback page no longer renders manual feedback creation
+[PASS] Feedback page no longer mixes manual admin feedback copy
+[PASS] Bootstrap enables gzip output compression when supported
+[PASS] Bootstrap defines a central APP_DEBUG flag
+[PASS] Shared bootstrap file exists
+[PASS] Data layer exposes shared pagination helper
+[PASS] Data layer exposes shared query URL helper
+[PASS] Data layer exposes request memoization helper
+[PASS] Data layer remembers the preferred Firebase trip collection path
+[PASS] Data layer exposes a memoized all-users helper
+[PASS] Data layer exposes a shared trip collection extractor
+[PASS] Data layer memoizes the formatted drivers list
+[PASS] Data layer memoizes dashboard totals
+[PASS] Pagination helper slices associative arrays while preserving keys
+[PASS] Pagination helper reports the current page correctly
+[PASS] Pagination helper reports previous-page availability
+[PASS] Pagination helper reports next-page availability on the last page
+[PASS] Login page restores the v6 branding
+[PASS] Login page now loads cached external CSS
+[PASS] Login stylesheet restores the v6 gradient design
+[PASS] External login stylesheet exists

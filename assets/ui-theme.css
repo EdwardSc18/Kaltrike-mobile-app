@@ -1,0 +1,780 @@
+:root {
+    --app-bg: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    --surface: #ffffff;
+    --surface-soft: #f7fbff;
+    --border: #d6e4f0;
+    --border-strong: #c3d6e8;
+    --text: #2c3e50;
+    --muted: #6b7c93;
+    --primary: #3498db;
+    --primary-dark: #2980b9;
+    --accent: #27ae60;
+    --accent-dark: #2ecc71;
+    --success: #27ae60;
+    --warning: #f39c12;
+    --danger: #e74c3c;
+    --shadow-lg: 0 16px 38px rgba(0, 0, 0, 0.14);
+    --shadow-md: 0 10px 24px rgba(52, 152, 219, 0.18);
+    --radius-xl: 18px;
+    --radius-lg: 15px;
+    --radius-md: 10px;
+}
+html {
+    scroll-behavior: smooth;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    background: var(--app-bg) fixed !important;
+    color: var(--text) !important;
+    overflow-x: hidden !important;
+}
+img,
+picture,
+video,
+canvas,
+svg,
+iframe {
+    max-width: 100%;
+}
+.main-content {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    padding: 28px !important;
+}
+
+.hero {
+    align-items: stretch;
+}
+.hero-card,
+.panel-card,
+.section-card,
+.table-card,
+.summary-panel {
+    width: 100%;
+}
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+.hero-actions a,
+.hero-actions .btn,
+.hero-actions button {
+    min-height: 46px;
+}
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 24px !important;
+    padding: 22px 24px !important;
+    background: var(--surface) !important;
+    border-radius: var(--radius-xl) !important;
+    box-shadow: var(--shadow-lg) !important;
+    border: 1px solid rgba(255,255,255,0.45) !important;
+}
+.header h1,
+.page-title,
+h1,
+h2,
+h3 {
+    color: var(--text) !important;
+    letter-spacing: -0.02em;
+}
+.header h1 {
+    margin: 0 !important;
+    font-size: clamp(1.9rem, 2.5vw, 2.6rem) !important;
+    font-weight: 800 !important;
+}
+.header p,
+.page-subtitle,
+.subtitle,
+.helper-text,
+small,
+.muted,
+.page-title span,
+.header span,
+.header small {
+    color: var(--muted) !important;
+}
+.top-controls,
+.filters-section,
+.filter-section,
+.search-filter,
+.toolbar,
+.action-bar,
+.button-group,
+.form-row,
+.form-grid,
+.control-buttons,
+.action-buttons,
+.bulk-actions,
+.search-container,
+.search-box,
+.filters,
+.filter-row,
+.pagination,
+.details-actions,
+.info-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.stats-grid,
+.summary-grid,
+.dashboard-grid,
+.card-grid,
+.details-grid,
+.info-grid,
+.profile-grid,
+.documents-grid,
+.metrics-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px !important;
+}
+.stat-card,
+.stats-card,
+.summary-card,
+.card,
+.content-card,
+.chart-container,
+.table-container,
+.filters-section,
+.filter-card,
+.form-section,
+.form-card,
+.create-form,
+.dashboard-panel,
+.section-card,
+.modal-content,
+.user-card,
+.data-card,
+.list-card,
+.quick-actions,
+.metric-card,
+.panel,
+.widget-card,
+.drivers-table-container,
+.commuters-table-container,
+.ratings-table-container,
+.trips-table-container,
+.rides-table-container,
+.detail-card,
+.info-card,
+.document-card,
+.profile-card,
+.table-card,
+.records-card,
+.summary-panel,
+.hero-card {
+    background: var(--surface) !important;
+    border: 1px solid rgba(255,255,255,0.45) !important;
+    border-radius: var(--radius-xl) !important;
+    box-shadow: var(--shadow-lg) !important;
+}
+.stat-card,
+.stats-card,
+.summary-card,
+.form-section,
+.form-card,
+.create-form,
+.section-card,
+.quick-actions,
+.metric-card,
+.panel,
+.widget-card,
+.detail-card,
+.info-card,
+.document-card,
+.profile-card,
+.summary-panel,
+.hero-card {
+    padding: 22px !important;
+}
+.table-container,
+.table-wrapper,
+.table-responsive,
+.drivers-table-container,
+.commuters-table-container,
+.ratings-table-container,
+.trips-table-container,
+.rides-table-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+th {
+    background: var(--surface-soft) !important;
+    color: #486581 !important;
+    font-weight: 700 !important;
+    border-bottom: 1px solid var(--border) !important;
+}
+tr td {
+    border-bottom: 1px solid rgba(214, 228, 240, 0.85) !important;
+}
+tr:hover td {
+    background: rgba(52, 152, 219, 0.05) !important;
+}
+input,
+select,
+textarea {
+    width: 100%;
+    max-width: 100%;
+    min-height: 46px;
+    border-radius: var(--radius-md) !important;
+    border: 1px solid var(--border-strong) !important;
+    background: #ffffff !important;
+    color: var(--text) !important;
+    box-shadow: none !important;
+}
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.14) !important;
+}
+button,
+.btn,
+.action-btn,
+.create-btn,
+.delete-btn,
+.edit-btn,
+.view-btn,
+.secondary-btn,
+.primary-btn,
+.submit-btn,
+a.btn,
+input[type="submit"],
+input[type="button"] {
+    border: 0 !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+button:not(.sidebar-toggle),
+.btn-primary,
+.primary-btn,
+.create-btn,
+.submit-btn,
+a.btn,
+input[type="submit"],
+input[type="button"] {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%) !important;
+    color: #ffffff !important;
+    box-shadow: var(--shadow-md) !important;
+}
+.secondary-btn,
+.btn-secondary,
+button.secondary,
+button.btn-secondary {
+    background: #eef6fc !important;
+    color: var(--text) !important;
+    border: 1px solid var(--border) !important;
+    box-shadow: none !important;
+}
+button:hover,
+.btn:hover,
+.action-btn:hover,
+a.btn:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+.status,
+.badge,
+.status-badge,
+.status-pill,
+.chip,
+.label-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border-radius: 999px !important;
+    padding: 6px 12px !important;
+    font-weight: 700 !important;
+}
+.alert,
+.message,
+.notification,
+.flash-message {
+    border-radius: 10px !important;
+    border: 1px solid var(--border) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+.modal,
+.modal-overlay {
+    padding: 16px;
+}
+.modal-content {
+    width: min(100%, 920px) !important;
+    max-width: calc(100vw - 24px) !important;
+    max-height: calc(100vh - 24px);
+    overflow: auto;
+}
+@media (min-width: 993px) {
+    .main-content {
+        margin-left: 262px !important;
+        max-width: calc(100vw - 262px);
+    }
+}
+@media (max-width: 992px) {
+    body {
+        display: block !important;
+    }
+    .main-content {
+        margin-left: 0 !important;
+        padding: 84px 16px 24px !important;
+    }
+    .header {
+        margin-bottom: 22px !important;
+        padding: 18px 18px !important;
+    }
+    .hero-actions {
+        width: 100%;
+    }
+    .header h1 {
+        font-size: 1.9rem !important;
+    }
+    .stats-grid,
+    .summary-grid,
+    .dashboard-grid,
+    .card-grid,
+    .details-grid,
+    .info-grid,
+    .profile-grid,
+    .documents-grid,
+    .metrics-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .top-controls,
+    .toolbar,
+    .control-buttons,
+    .action-buttons,
+    .bulk-actions,
+    .button-group,
+    .search-filter,
+    .filter-row,
+    .pagination {
+        width: 100%;
+    }
+    table {
+        min-width: 620px;
+    }
+}
+@media (max-width: 768px) {
+    .main-content {
+        padding: 82px 14px 20px !important;
+    }
+    .header,
+    .top-controls,
+    .toolbar,
+    .control-buttons,
+    .action-buttons,
+    .bulk-actions,
+    .button-group,
+    .form-row,
+    .form-grid,
+    .search-filter,
+    .search-container,
+    .search-box,
+    .details-actions,
+    .info-actions,
+    .driver-info,
+    .commuter-info,
+    .trip-meta,
+    .ride-meta,
+    .rating-meta {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+    .header h1 {
+        font-size: 1.7rem !important;
+    }
+    .hero-actions {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+    .hero-actions > * {
+        width: 100%;
+    }
+    .stat-card,
+    .stats-card,
+    .summary-card,
+    .table-container,
+    .filters-section,
+    .form-section,
+    .content-card,
+    .chart-container,
+    .card,
+    .section-card,
+    .modal-content,
+    .drivers-table-container,
+    .commuters-table-container,
+    .ratings-table-container,
+    .trips-table-container,
+    .rides-table-container,
+    .detail-card,
+    .info-card,
+    .document-card,
+    .profile-card {
+        border-radius: 16px !important;
+    }
+    .header > *,
+    .top-controls > *,
+    .toolbar > *,
+    .control-buttons > *,
+    .action-buttons > *,
+    .bulk-actions > *,
+    .button-group > *,
+    .form-row > *,
+    .form-grid > *,
+    .search-filter > *,
+    .search-container > *,
+    .search-box > * {
+        width: 100%;
+    }
+    button,
+    .btn,
+    .action-btn,
+    .create-btn,
+    .delete-btn,
+    .edit-btn,
+    .view-btn,
+    .secondary-btn,
+    .primary-btn,
+    .submit-btn,
+    a.btn,
+    input[type="submit"],
+    input[type="button"] {
+        width: 100%;
+        justify-content: center;
+    }
+    table {
+        min-width: 560px;
+    }
+}
+@media (max-width: 480px) {
+    .main-content {
+        padding: 78px 12px 18px !important;
+    }
+    .header {
+        padding: 16px !important;
+    }
+    .header h1 {
+        font-size: 1.5rem !important;
+    }
+    .stat-card,
+    .stats-card,
+    .summary-card,
+    .form-section,
+    .form-card,
+    .create-form,
+    .section-card,
+    .quick-actions,
+    .metric-card,
+    .panel,
+    .widget-card,
+    .detail-card,
+    .info-card,
+    .document-card,
+    .profile-card,
+    .summary-panel,
+    .hero-card {
+        padding: 16px !important;
+    }
+    table {
+        min-width: 480px;
+    }
+}
+
+
+/* Layout cleanup pass v19 */
+body {
+    display: block !important;
+    min-width: 320px;
+}
+
+.main-content > * {
+    max-width: 100%;
+}
+
+.container {
+    width: min(1200px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 26px 0 34px;
+}
+
+.header,
+.trip-header,
+.section-header,
+.driver-profile-header,
+.page-header,
+.panel-header,
+.title-row,
+.summary-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+    flex-wrap: wrap !important;
+}
+
+.header-actions,
+.row,
+.driver-actions,
+.validation-actions,
+.trip-actions,
+.report-actions,
+.form-actions,
+.page-actions,
+.section-actions,
+.modal-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.row > *,
+.header-actions > *,
+.driver-actions > *,
+.validation-actions > *,
+.trip-actions > *,
+.report-actions > *,
+.form-actions > *,
+.page-actions > *,
+.section-actions > * {
+    max-width: 100%;
+}
+
+.section,
+.card,
+.driver-details-card,
+.driver-info-card,
+.validation-section,
+.user-card,
+.fare-card,
+.side-card,
+.trip-card,
+.detail-card,
+.details-card,
+.summary-card,
+.records-card,
+.document-card,
+.map-card,
+.info-card,
+.route-card,
+.route-visual,
+.panel-card,
+.hero-card,
+.create-form,
+.table-card,
+.validation-card,
+.driver-profile-header,
+.driver-rides-section,
+.trip-summary,
+.main-details,
+.side-details {
+    width: 100%;
+    max-width: 100%;
+}
+
+.details-grid,
+.validation-grid,
+.panel-grid,
+.route-grid,
+.two-column-grid,
+.content-grid,
+.main-layout {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 18px !important;
+}
+
+.info-grid,
+.documents-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    gap: 16px !important;
+}
+
+.info-item,
+.document-card,
+.metric-card,
+.stat-card,
+.summary-card,
+.profile-card,
+.user-card {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.driver-profile-header {
+    padding: 22px !important;
+    background: var(--surface) !important;
+    border: 1px solid rgba(255,255,255,0.45) !important;
+    border-radius: var(--radius-xl) !important;
+    box-shadow: var(--shadow-lg) !important;
+    margin-bottom: 22px !important;
+}
+
+.trip-header,
+.section-header,
+.panel-header {
+    margin-bottom: 18px !important;
+}
+
+.trip-id,
+.code,
+.record-id,
+.reference-id,
+pre,
+code {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.route-visual {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px !important;
+    align-items: stretch !important;
+}
+
+.route-step {
+    min-width: 0;
+}
+
+.route-line {
+    width: 100% !important;
+    min-height: 2px;
+    align-self: center;
+}
+
+.table-wrap,
+.table-container,
+.table-wrapper,
+.table-responsive,
+.records-table,
+.list-table {
+    border-radius: 16px;
+}
+
+label {
+    font-weight: 700;
+}
+
+.pagination a,
+.pagination span,
+.page-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    min-height: 42px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    text-decoration: none;
+}
+
+.alert-message,
+.message-box,
+.empty-state,
+.no-data,
+.placeholder-card {
+    width: 100%;
+    max-width: 100%;
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: min(100%, calc(100% - 28px));
+        padding: 18px 0 24px;
+    }
+
+    .details-grid,
+    .validation-grid,
+    .panel-grid,
+    .route-grid,
+    .content-grid,
+    .main-layout {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: min(100%, calc(100% - 24px));
+        padding: 16px 0 22px;
+    }
+
+    .header,
+    .trip-header,
+    .section-header,
+    .driver-profile-header,
+    .page-header,
+    .panel-header,
+    .title-row,
+    .summary-header,
+    .header-actions,
+    .row,
+    .driver-actions,
+    .validation-actions,
+    .trip-actions,
+    .report-actions,
+    .form-actions,
+    .page-actions,
+    .section-actions,
+    .modal-actions,
+    .route-visual {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+
+    .route-line {
+        display: none;
+    }
+
+    .trip-id,
+    .info-value-large,
+    .fare-amount {
+        font-size: clamp(1.2rem, 5vw, 1.8rem) !important;
+    }
+
+    .header-actions > *,
+    .row > *,
+    .driver-actions > *,
+    .validation-actions > *,
+    .trip-actions > *,
+    .report-actions > *,
+    .form-actions > *,
+    .page-actions > *,
+    .section-actions > *,
+    .modal-actions > * {
+        width: 100%;
+    }
+}

@@ -1,0 +1,167 @@
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 1300;
+    border: 0;
+    border-radius: 12px;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: #ffffff;
+    box-shadow: 0 10px 24px rgba(52, 152, 219, 0.3);
+    cursor: pointer;
+}
+.sidebar-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(44, 62, 80, 0.42);
+    backdrop-filter: blur(2px);
+    z-index: 1090;
+}
+body.sidebar-open {
+    overflow: hidden !important;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 262px;
+    height: 100vh;
+    overflow-y: auto;
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%) !important;
+    padding: 18px 0 24px !important;
+    box-shadow: 10px 0 30px rgba(0,0,0,0.15);
+    z-index: 1100;
+    color: rgba(255,255,255,0.96);
+    display: flex;
+    flex-direction: column;
+}
+.sidebar .logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 14px;
+    padding: 24px 22px !important;
+    text-align: left !important;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255,255,255,0.14);
+}
+.sidebar .logo .logo-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.14);
+    font-size: 28px;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
+}
+.sidebar .logo .logo-copy {
+    min-width: 0;
+}
+.sidebar .logo .logo-copy span {
+    display: block;
+    font-size: 22px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.15;
+}
+.sidebar .logo .logo-copy small {
+    display: block;
+    color: rgba(255,255,255,0.76);
+    font-size: 12px;
+    margin-top: 6px;
+}
+.sidebar .nav-links {
+    list-style: none;
+    padding: 18px 0 !important;
+    flex: 1 1 auto;
+}
+.sidebar .nav-links li {
+    margin: 7px 0 !important;
+}
+.sidebar .nav-links a {
+    display: flex !important;
+    align-items: center;
+    gap: 14px;
+    margin: 0 14px;
+    padding: 14px 16px !important;
+    border-radius: 14px;
+    color: rgba(255,255,255,0.92) !important;
+    text-decoration: none !important;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition: transform 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
+}
+.sidebar .nav-links a:hover {
+    background: rgba(255,255,255,0.12) !important;
+    color: #ffffff !important;
+    transform: translateX(3px);
+}
+.sidebar .nav-links a:visited,
+.sidebar .nav-links a:focus,
+.sidebar .nav-links a:active {
+    color: rgba(255,255,255,0.92) !important;
+    text-decoration: none !important;
+}
+.sidebar .nav-links a.active {
+    background: rgba(255,255,255,0.18) !important;
+    color: #ffffff !important;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18), 0 8px 20px rgba(0,0,0,0.14);
+}
+.sidebar .nav-links a i {
+    width: 22px;
+    min-width: 22px;
+    text-align: center;
+    font-size: 16px;
+}
+.sidebar .nav-links a span {
+    flex: 1;
+    display: block;
+    white-space: nowrap;
+}
+.sidebar-user-card {
+    position: static;
+    margin: auto 16px 0;
+    padding: 14px 15px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.16);
+    color: rgba(255,255,255,0.94);
+    font-size: 12px;
+    line-height: 1.5;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+.sidebar-user-card .sidebar-role {
+    color: rgba(255,255,255,0.72);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+@media (max-width: 992px) {
+    .sidebar-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .sidebar-backdrop.is-open {
+        display: block;
+    }
+    .sidebar {
+        transform: translateX(-108%);
+        transition: transform 0.22s ease;
+        width: min(280px, calc(100vw - 26px));
+        max-width: 280px;
+    }
+    .sidebar.is-open {
+        transform: translateX(0);
+    }
+    .sidebar-user-card {
+        position: static;
+        margin: 14px 16px 0;
+    }
+}
